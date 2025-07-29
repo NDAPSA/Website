@@ -1,0 +1,439 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            #heading{
+                width: 100vw;
+                text-align: center;
+            }
+            #gridBoard{
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            #gridBoard>div{
+                /* border: 1px black solid;     */
+                text-align: center;
+                /* font-size: 24px; */
+            }
+            #historyFact{
+                /* margin-top:50px; */
+            }
+            body{
+                font-size: 24px;
+                background-image: url('wild-prairie-rose-7.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: 100% 100%;
+                overflow: hidden;
+            }
+            /* #backgroundImage{
+                position: absolute;
+                z-index: -1;
+                width: auto;
+                height: auto;
+            } */
+        </style>
+    </head>
+    <script>
+        function correction(){
+            if(detectMob()){
+                let hold = document.getElementById("gridBoard");
+                hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
+            }
+            console.log("Corrections complete.")
+            //Get the current date:
+            var today = new Date()
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');//January is 0 by default.
+            var mothDay =  mm + '/' + dd;//I'm keeping the mispelling.
+            let facto = theEventToday(mothDay);
+            document.getElementById("Factoid").innerHTML=facto
+        }
+        function detectMob() {
+            const toMatch = [
+                /Android/i,
+                /webOS/i,
+                /iPhone/i,
+                /iPad/i,
+                /iPod/i,
+                /BlackBerry/i,
+                /Windows Phone/i
+            ];
+        
+            return toMatch.some((toMatchItem) => {
+                return navigator.userAgent.match(toMatchItem);
+            });
+        }
+        function theEventToday(day){
+            switch (day){
+                case "08/15":
+                    return "On this date in 1914, the SS Ancon became the first ship to pass through the Panama Canal."
+                    break;
+                case "08/16":
+                    return "On this date in 1928, Wyatt Tee Walker was born.  He served as an advisor to Gov. Nelson A. Rockefeller, but is better known for having served as chief-of-staff for Martin Luther King, Jr."
+                    break;
+                case "08/17":
+                    return "On this date in 1890,  Harold Hopkins was born.  He was a key advisor to FDR focusing on increasing employment and foreign affairs.  He attend four major Allied conferences."
+                    break;
+                case "08/18":
+                    return "On this date in 1894, the U.S. Congress established the Bureau of Immigration."
+                    break;
+                case "08/19":
+                    return "On this date in 1929, Francis Gary Powers was born.  Powers was the U-2 pilot shotdown by the Soviets in 1960."
+                    break;
+                case "08/20":
+                    return "On this date in 1977, Voyager II launched from Cape Canaveral, FL."
+                    break;
+                case "08/21":
+                    return "On this date in 1959, Hawaii became a state."
+                    break;
+                case "08/22":
+                    return "On this date in 1902, President Theodore Roosevelt became the the first chief executive of the US to ride in a car."
+                    break;
+                case "08/23":
+                    return "On this date in 1912, The U.S. Congress established the Commission on Industrial Relations."
+                    break;
+                case "08/24":
+                    return "On this date in 1814, British forces burned the White House, U.S. Capitol, and other buildings as part of the War of 1812.  This remains the only occupation of the U. S. Capitol by a foreign power."
+                    break;
+                case "08/25":
+                    return "On this date in 1934, Daniel J. Elazar was born on Minneapolis, MN.  He is known for his work on federalism and American political culture."
+                    break;
+                case "08/26":
+                    return "On this date in 1920, the U.S. Congress certified the ratification of the 19th Amendment, giving women the right to vote."
+                    break;
+                case "08/27":
+                    return "On this date in 1962, NASA successfully launched Mariner 2, which is the first spacecraft to flyby another planet (Vensus)."
+                    break;
+                case "08/28":
+                    return 'On this date in 1963, Martin Luther King, Jr gave his famous "I have a Dream Speech."';
+                    break;
+                case "08/29":
+                    return "On this date in 1879,  Louis Brownlow was born.  FDR's commission to reorganize government was chaired and named for Brownlow."
+                    break;
+                case "08/30":
+                    return "On this date in 1967, Thurgood Marshall was confirmed as a U.S. Supreme Court Justice.  He was the first African-American to serve on the high court."
+                    break;
+                case "08/31":
+                    return "On this date in 1972, The U.S. Air Force tested the F-15."
+                    break;
+                case "09/1":
+                    return "On this date in 1897, the city of Boston opens the first underground rapid transportation system in the US."
+                    break;
+                case "09/2":
+                    return "On this date in 1935, the Great Labor date Hurricane hit the Florida Keys. Over 250 world war I veterans were killed because of weather forecasting errors.  The veterans were their to build the overseas highway to the Keys."
+                    break;
+                case "09/3":
+                    return "On this date in 1868, Mary Parker Follett was born.  She was a leading thinking in Organizational Theory. She tried to add the human piece to the mechanistic view of managerment in the early 20th Century."
+                    break;
+                case "09/4":
+                    return "On this date in 1957, Arkansas Governor Orval Faubus uses the state national guard to prevent 9 African-American students from entering Little Rock Central High School."
+                    break;
+                case "09/5":
+                        return "On this date in 1774, the 1st Continental Congress met in Philadephia, PA.   Twelve of the 13 British colonies were represened and Philadelphia became the first capital of the U.S."
+                        break;
+                case "09/6":
+                        return "On this date in 1860, Jane Addams was born.  She was social worker, political activitist and a public administrator.  She was the first American women to be awarded the Nobel Peace Prize."
+                        break;
+                case "09/7":
+                        return "On this date in 1977, President Carter and Panama's General Omar Torrijos sign the Panama Canal treaties, guaranteeing Panama control of the Panama Canal after 1999."
+                        break;
+                case "09/8":
+                        return "On this date in 1916, US President Woodrow Wilson signs the Emergency Revenue Act, doubling the rate of income tax and adding inheritance and munitions profits tax."
+                        break;
+                case "09/9":
+                        return "On this date in 1957, US President Eisenhower signs 1st civil rights bill since Reconstruction."
+                        break;
+                case "09/10":
+                        return 'On this date in 1776, General George Washington asks for a spy, Nathan Hale volunteered. Nathan Hales is famous for saying, "I only regret that I have but one life to lose for my country," before the British executed as an illegal combatant.'
+                        break;
+                case "09/11":
+                        return "On this date in 1959, the U.S. Congress passed the first food stamp program.  It was a 2-year disgretionary program."
+                        break;
+                case "09/12":
+                        return "On this date in 1944,  Leonard Peltier, Native American activist (American Indian Movement), born in Grand Forks, North Dakota"
+                        break;
+                case "09/13":
+                        return "On this date in 1945, the American Society for Public Administration was formally incorporated. (The organization began in 1939.)"
+                        break;
+                case "09/14":
+                        return "On this date in 1901, Theodore Roosevelt is sworn in as the youngest man to serve as US President, after William McKinley dies after being shots in Buffalo."
+                        break;
+                case "09/15":
+                        return "On this date in 1966, U.S. President Lyndon B. Johnson, responding to a sniper attack at the University of Texas at Austin, writes a letter to the United States Congress urging the enactment of gun control legislation."
+                        break;
+                case "09/16":
+                        return 'On this date in 1968, Richard Nixon appears on "Rowan & Martin\'s Laugh-in".';
+                        break;
+                case "09/17":
+                        return "On this date in 1978, Anwar Sadat, Menachem Begin and Jimmy Carter sign the Camp David Accords, frameworks for peace in the Middle East and between Egypt and Israel."
+                        break;
+                case "09/18":
+                        return "On this date in 1793, US President George Washington lays the cornerstone of the Capitol Building in Washington, D.C.."
+                        break;
+                case "09/19":
+                        return "On this date in 1986, US Federal health officials announce the first antiretroviral medication (AZT) to prevent and treat HIV/AIDS will be available to patients."
+                        break;
+                case "09/20":
+                        return "On this date in 1881, Chester A. Arthur was sworn in as the twenty-first president of the United States, assuming the presidency upon the death of James A. Garfield. Eleven weeks earlier, Garfield had been shot by Charles J. Guiteau in the Baltimore & Ohio Railroad Depot in Washington, D.C.."
+                        break;
+                case "09/21":
+                        return "On this date in 1955, Richard J Hieb, astronaut (STS 39, 49, 65), born in Jamestown, North Dakota."
+                        break;
+                case "09/22":
+                        return "On this date in 1961, President Kennedy signed legislation creating the Peace Corp."
+                        break;
+                case "09/23":
+                        return "On this date in 1957, President Dwight D. Eisenhower orders US troops to support the integration of nine Black students at Little Rock Central High School in Arkansas."
+                        break;
+                case "09/24":
+                        return "On this date in 1789, President George Washington signed the Judiciary Act of 1789.  It established the six-member U.S. Supreme Court."
+                        break;
+                case "09/25":
+                        return "On this date in 1981, Sandra Day O'Connor is sworn in as the first female US Supreme Court Justice."
+                        break;
+                case "09/26":
+                        return "On this date in 1892, John Philip Sousa's New Marine Band's 1st public appearance at Stillman Music Hall in Plainfield, New Jersey."
+                        break;
+                case "09/27":
+                        return "On this date in 1963,  Louis Brownlow died.  FDR's commission to reorganize government was chaired and named for Brownlow."
+                        break;
+                case "09/28":
+                        return "On this date in 1976, US Congress passes Toxic Substances Control Act."
+                        break;
+                case "09/29":
+                        return "On this date in 1962, President Kennedy authorizes use of federal troops to integrate University of Mississippi."
+                        break;
+                case "09/30":
+                        return "On this date in 1949, the last planeâ€“an American C-54â€“landed in Berlin and unloaded over two tons of coal ending the Berlin Airlift."
+                        break;
+                case "10/1":
+                        return "On this date in 1890, President Benjamin Harrison signed an act of Congress creating Yosemite National Park."
+                        break;
+                case "10/2":
+                        return "On this date in 1967, Chief Justice Earl Warren swears in Thurgood Marshall, the first Black justice of the U.S. Supreme Court."
+                        break;
+                case "10/3":
+                        return "On this date in 1917, the U.S. Congress passes the War Revenue Act, increasing income taxes to unprecedented levels in order to raise more money for the war effort."
+                        break;
+                case "10/4":
+                        return "On this date in 1927, sculpting begins on the face of Mount Rushmore in the Black Hills National Forest of South Dakota."
+                        break;
+                case "10/5":
+                        return "On this date in 1947,  Harry Truman delivers the first presidential address televised from the White House."
+                        break;
+                case "10/6":
+                        return "On this date in 1949 US President Harry Truman signs Mutual Defense Assistance Act (for NATO)."
+                        break;
+                case "10/17":
+                        return "On this date in 1979, the U.S. Department of Education was established."
+                        break;
+                case "10/21":
+                        return "On this date in 1963, Paul Appleby died.  He held several bureaucratic position in the US government, and consulted with the government of India.  He was also Dean of the Maxwell School of Citizenship and Public Affairs of Syracuse University."
+                        break;
+                case "10/27":
+                        return "On this date in 1925,  Warren M. Christopher, 63rd United States Secretary of State (1993-97), born in Scranton, North Dakota."
+                        break;
+                case "11/2":
+                        return "On this date in 1889, North Dakota was admitted to the Union, and became the 39th state."
+                        break;
+                case "11/7":
+                        return "On this date in 1959, Arthur C. Townley died.  Townley founded the Nonpartisan League in North Dakota."
+                        break;
+                case "11/19":
+                        return "On this date in 1929, Henri Fayol died.  He is considered a founder of modern management."
+                        break;
+                case "11/22":
+                        return "On this date in 2002, the Department of Homeland Security was established."
+                        break;
+                case "12/2":
+                        return "On this date in 1999, Daniel J. Elazar died.  He is known for his work on federalism and American political culture."
+                        break;
+                case "12/18":
+                        return "On this date in 1933, Mary Parker Follett died.  She was a leading thinking in Organizational Theory. She tried to add the human piece to the mechanistic view of managerment in the early 20th Century."
+                        break;
+                case "12/22":
+                        return "On this date in 1932, Mancur Olson was born in Grand Forks, ND!  He wrote the The Logic of Collective Action."
+                        break;
+                case "12/28":
+                        return 'On this date in 1856 President Woodrow Wilson was born.  His 1887 article "The Study of Administration" is often considered the foundation of American Public Administration.'
+                        break;
+                case "12/30":
+                        return "On this date in 1880, Arthur C. Townley was born.  Townley founded the Nonpartisan League in North Dakota, which gained control of ND government around 1919 and instituted many governmental reforms."
+                        break;
+                case "01/8":
+                        return 'On this date in 1937, The Brownlow Committee issued their report declaring "The President needs help."  This contributed to the establishment of the Executive Office of the President.'
+                        break;
+                case "01/10":
+                        return "On this date in 1993, Luther Gulick died, just 7 dates short of his 101st birthdate.  He developed POSDCORB."
+                        break;
+                case "01/13":
+                        return "On this date in 1883, President Chester A. Arthur signed the Pendleton Civil Service Act into law.  The law was meant to end the spoil systems and create a merit based civil service system."
+                        break;
+                case "01/17":
+                        return "On this date in 1892 Luther Gulick was born in Osaka Japan. He was a member of FDR's Brownlow Committee (1936-1938)."
+                        break;
+                case "01/23":
+                        return "On this date in 2018, Wyatt Tee Walker died.  He served as an advisor to Gov. Nelson A. Rockefeller, but is better known for having served as chief-of-staff for Martin Luther King, Jr."
+                        break;
+                case "01/29":
+                        return "On this date in 1946,  Harold Hopkins died.  He was a key advisor to FDR focusing on increasing employment and foreign affairs.  He attend four major Allied conferences."
+                        break;
+                case "02/3":
+                        return 'On this date in 1924, President Woodrow Wilson died.  His 1887 article "The Study of Administration" is often considered the foundation of American Public Administration.';
+                        break;
+                case "02/14":
+                        return "On this date in 1903, the U.S. Department of Commerce was established."
+                        break;
+                case "02/19":
+                        return "On this date in 1998, Mancur Olson died.  He was born in Grand Forks, ND!  He wrote the The Logic of Collective Action."
+                        break;
+                case "03/3":
+                        return 'On this date in 1993, C. Northcote Parkinson died.  He is known for Parkinson\'s Law, which is " Work expands to fill the time allotted."';
+                        break;
+                case "03/4":
+                        return "On this date in 1913, the U.S. Department of Labor was established."
+                        break;
+                case "03/15":
+                        return "On this date in 1989 the Department of Veterans Affairs was established."
+                        break;
+                case "03/22":
+                        return "On this date in 1936, President Roosevelt established the Browlow Committee comprised of Louis Brownlow, Charles Merriam and Luther Gulick."
+                        break;
+                case "03/30":
+                        return "On this date in 1967, The National Academy of Public Administration was establed by NASA administrator James E. Webb and other government officials."
+                        break;
+                case "04/1":
+                        return "On this date in 1967, the Department of Transportation was established."
+                        break;
+                case "04/3":
+                        return "On this date in 1939, the Reorganization Act was enacted.   It authorized the President to hire more staff.  It was a response to the Brownlow Committee report."
+                        break;
+                case "04/7":
+                        return "On this date in 2009, Samuel Beer died.  He served as FDR's speech writer and as a political advisor to JFK.  He was a leading scholar in Federalism."
+                        break;
+                case "04/9":
+                        return 'On this date in 1996, Rufus E. Miles died.  He is known for developing Mile\'s Law: "Where you stand depends on where you sit."'
+                        break;
+                case "04/10":
+                        return "On this date in 1984, officially charted the National Academic of Pubic Administration (Public Law 98-257)."
+                        break;
+                case "04/11":
+                        return "On this date in 1953, the U.S. Department of Health and Human Services was established."
+                        break;
+                case "04/22":
+                        return "On this date in 1864 Max Weber was born.  He defined the five characteristics of bureaucracy."
+                        break;
+                case "05/15":
+                        return "On this date in 1862, the U.S. Department of Agriculture was established."
+                        break;
+                case "05/18":
+                        return 'On this date in 1972 Wallace S. Sayer died.  He is credited with developing Sayer\'s law:  "In any dispute the intensity of feeling is inversely proportional to the value of the issues at stake." The corollary is  "That is why academic politics are so bitter."'
+                        break;
+                case "05/21":
+                        return "On this date in 1935, Jane Addams died.  She was social worker, political activitist and a public administrator.  She was the first American women to be awarded the Nobel Peace Prize."
+                        break;
+                case "06/10":
+                        return "On this date in 1921,  President Harding signed the Budget and Accounting Act of 1921 into law.  This bill established the practice of the President submitting a consolidated budget to Congress.  Prior to this agencies went directy to Congress."
+                        break;
+                case "06/11":
+                        return "On this date in 1946, President Truman signed the Administrative Procedures Act into law."
+                        break;
+                case "06/12":
+                        return "On this date in 2012, Elinor Ostrom died.  She was the first women to win the Noble Prize in Economics (2009) for her work on common pool resources."
+                        break;
+                case "06/14":
+                        return "On this date in 1920 Max Weber died.  He defined the five main characteristics of bureaucracy."
+                        break;
+                case "06/24":
+                        return 'On this date in 1905 Wallace S. Sayer was born.  He famously said "Business and Government are alike in all unimportant respects."'
+                        break;
+                case "07/1":
+                        return "On this date in 1870, the U.S. Department of Justice was established."
+                        break;
+                case "07/27":
+                        return "On this date in 1789, the U.S. Department of State was established."
+                        break;
+                case "07/29":
+                        return "On this date in 1841, Henri Fayol was born.  He is considered a founder of modern management."
+                        break;
+                case "07/30":
+                        return 'On this date in 1909, C. Northcote Parkinson was born.  He is known for his book Parkinson\'s Law, which is " Work expands to fill the time allotted."'
+                        break;
+                case "08/1":
+                        return "On this date in 1977, Francis Gary Powers died.  Powers was the U-2 pilot shotdown by the Soviets in 1960."
+                        break;
+                case "08/4":
+                        return "On this date in 1977, the U.S. Department of Energy was established."
+                        break;
+                case "08/7":
+                        return "On this date in 1933, Elinor Ostrom was born.  She was the first women to win the Noble Prize in Economics (2009) for her work on common pool resources."
+                        break;
+                default:
+                    return "Seemingly nothing too important."
+            }
+        }
+    </script>
+    <body onload="correction()">
+        <!-- <img id="backgroundImage" src="wild-prairie-rose-7.png"></div> -->
+        <div id="heading"><h1>ASPA North Dakota</h1></div>
+        <hr>
+        <div id="gridBoard">
+            <div id="joinASPA">
+                <h2>To Join ND ASPA:</h2>
+                <p>Sign up the national APSA using this link:</p>
+                <a href="https://www.aspanet.org/ASPA/ASPA/Membership/Membership.aspx"> ASPA membership webpage</a>
+            </div>
+            <div id="historyFact">
+                <h3>On this day in Public Administration History:</h3>
+                <div id="Factoid"></div>
+            </div>
+            <div id="questions">
+                <h3>Questions or Comments:</h3>
+                If you have questions or comments, please contact us at: <a href="mailto:ND_ASPA@email.com">ND_ASPA@email.com</a>
+            </div>
+
+
+            <div id="upcomingEvents">
+                <h3>Upcoming Events</h3>
+                ND ASPA will be exhibiting at the ND league of Cities conference September 18th and 19th at the Bismark event center, please stop by and say hello.
+            </div>
+            <div id="ahead">
+                <h3>Looking Ahead</h3>
+
+                UND’s Political Science and Public Administration department will be hosting am online <br>
+                Wildfire Simulation.<br>
+                We are looking for public administrators, EMS workers and any other interested parties in the State of North Dakota to participate alongside <br>
+                UND MPA students.<br>
+
+                If you might be interested in this event, please sign up here.  
+            </div>
+            <div id="news">
+                <h3>News alert:</h3>
+
+                On XXX XX, 2025, the Executive committee of the American Society for Public Administration approved the ND ASPA chapters application.  <br>
+
+                This is the first time on ND history that we have had a state ASPA chapter.   There was an upper Midwest regional chapter that we were part of, at one point, but this is our first independent ND chapter.  
+            </div>
+            
+
+            <div id="officers">
+                <h3>ND ASPA Officers: </h3>
+
+(Officer Election will be held this fall.  If you are interested in serving please email us at ND_ASPA@gmail.com.)
+
+            </div>
+            <div id="nextMeeting">
+                <h3>Next Meeting:</h3>
+
+Our next meeting will be held over zoom.  The date has yet to be determined.  If you are interested in attending, please email us at ND_ASPA@gmail.com.  We will send you the details as soon as they become available. 
+
+            </div>
+            <div id="documents">
+                <!--Minutes and other important documents related to ND ASPA can be found here.<br>
+Then I’ll want a link here to take them to another page where we can post the minutes, our application, and our Bylaws.-->
+            </div>
+        </div>
+ 
+    </body>
+</html>
