@@ -71,7 +71,8 @@
             if(detectMob()){
                 let hold = document.getElementById("gridBoard");
                 // hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
-                hold.style["grid-template-areas"] = " 'news' 'look' 'join' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
+                // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
+                hold.style["grid-template-areas"] = " 'news' 'join' 'meeting' 'upcoming' 'look' 'officers' 'history' 'questions' 'minutes' "
             }
             console.log("Corrections complete.")
             //Get the current date:
