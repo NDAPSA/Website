@@ -11,6 +11,37 @@
                 display: grid;
                 column-gap: .5cm;
                 grid-template-columns: auto auto auto;
+                grid-template-areas:
+                "news look join"
+                "upcoming officers meeting"
+                "history questions minutes";
+            }
+            #news{
+                grid-area: news;
+            }
+            #joinASPA{
+                grid-area: join;
+            }
+            #questions{
+                grid-area:questions;
+            }
+            #upcomingEvents{
+                grid-area:upcoming;
+            }
+            #ahead{
+                grid-area:look;
+            }
+            #nextMeeting{
+                grid-area:meeting;
+            }
+            #historyFact{
+                grid-area:history;
+            }
+            #officers{
+                grid-area:officers;
+            }
+            #documents{
+                grid-area:minutes;
             }
             #gridBoard>div{
                 text-align: center;
