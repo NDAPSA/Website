@@ -7,13 +7,14 @@
                 text-align: center;
             }
             #gridBoard{
-                max-width: 100%;
+                align-self: center;
+                max-width: 100vw;
                 display: grid;
-                column-gap: .5cm;
+                column-gap: 1.2cm;
                 grid-template-areas:
-                "news look join"
-                "upcoming officers meeting"
-                "history questions minutes";
+                "news join calendar"
+                "history officers calendar"
+                "questions minutes calendar";
                 row-gap: .1cm;
             }
             #news{
@@ -22,18 +23,21 @@
             #joinASPA{
                 grid-area: join;
             }
+            #joinASPA>*{
+                text-align: center;
+            }
             #questions{
                 grid-area:questions;
             }
-            #upcomingEvents{
+            /* #upcomingEvents{
                 grid-area:upcoming;
-            }
-            #ahead{
+            } */
+            /* #ahead{
                 grid-area:look;
-            }
-            #nextMeeting{
+            } */
+            /* #nextMeeting{
                 grid-area:meeting;
-            }
+            } */
             #historyFact{
                 grid-area:history;
             }
@@ -43,9 +47,15 @@
             #documents{
                 grid-area:minutes;
             }
+            #calender{
+                grid-area:calendar;
+            }
             #gridBoard>div{
-                text-align: center;
+                text-align: justify;
                 align-self: center;
+            }
+            h2,h3,h4{
+                text-align: center;
             }
             /* #historyFact{
                 margin-top:50px;
@@ -357,42 +367,22 @@
                 <div id="gridBoard">
                         <div id="news">
                                 <h3>News alert:</h3>
-
-                                On July 23, 2025, the National Council of the American Society for Public Administration approved the ND ASPA chapters application.  <br>
-
-                                This is the first time on ND history that we have had a state ASPA chapter.   There was an upper Midwest regional chapter that we were part of, at one point, but this is our first independent ND chapter.  
+                                <p>
+                                        On July 23, 2025, the National Council of the American Society for Public Administration approved the ND ASPA chapters application.  
+                                        This is the first time on ND history that we have had a state ASPA chapter.   There was an upper Midwest regional chapter that we were part of, at one point, but this is our first independent ND chapter.  
+                                </p>
                         </div>
                         <div id="joinASPA">
                                 <h2>To Join ND ASPA:</h2>
-                                <p>Sign up the national APSA using this link:</p>
-                                <a href="https://www.aspanet.org/ASPA/ASPA/Membership/Membership.aspx"> ASPA membership webpage</a>
+                                <p>Sign up the national APSA using this link:
+                                        <a href="https://www.aspanet.org/ASPA/ASPA/Membership/Membership.aspx"> ASPA membership webpage</a>
+                                </p>
+                        </p>
                         </div>
                         <div id="questions">
                                 <h3>Questions or Comments:</h3>
                                 If you have questions or comments, please contact us at: <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>
                         </div>
-                        <div id="upcomingEvents">
-                                <h3>Upcoming Events</h3>
-                                ND ASPA will be exhibiting at the ND league of Cities conference September 18th and 19th at the Bismark event center, please stop by and say hello.
-                        </div>
-                        <div id="ahead">
-                                <h3>Looking Ahead</h3>
-
-                                UND’s Political Science and Public Administration department will be hosting an online <br>
-                                Wildfire Simulation.<br>
-                                We are looking for public administrators, EMS workers and any other interested parties in the State of North Dakota to participate alongside <br>
-                                UND MPA students.<br>
-
-                                If you might be interested in this event, please sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo3YfKmgoilfKoYyw8RdVk2Bx5W4yed8Zu-CfoDeYdrEP21w/viewform?usp=sharing&ouid=115399145034791348730">here</a>.  
-                        </div>
-                        <div id="nextMeeting">
-                                <h3>Next Meeting:</h3>
-
-                Our next meeting will be held over zoom.  The date has yet to be determined.  If you are interested in attending, please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.  We will send you the details as soon as they become available. 
-
-                        </div>
-
-
                         <div id="historyFact">
                                 <h3>On this day in Public Administration History:</h3>
                                 <div id="Factoid"><noscript>(Please enable javascript to view)</noscript></div>
@@ -409,21 +399,30 @@
                                 Minutes and other important documents related to ND ASPA can be found here.<br>
                                 Check back later to find them.
                         </div>
-                </div>
-                <div id="calender" style="text-align: center;">
-                        <img src="calendar.png" alt="A calender" width="200" height="200"><br>
-                        <h4>Next Meeting:</h4>
-                        Our next meeting will be held over zoom.  The date has yet to be determined.  If you are interested in attending, please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.  We will send you the details as soon as they become available. <br>
-                        <h4>Upcoming Events</h4>
-                        North Dakota ASPA will be exhibiting at the ND league of Cities conference September 18th and 19th at the Bismark event center, please stop by and say hello.<br>
-                        <h4>Looking Ahead</h4>
+                        <div id="calender">
+                                <div id="picAndMeet" style="display:grid; grid-template-columns: auto auto; column-gap: .5cm;">
+                                        <img src="calendar.png" alt="A calender" width="200" height="200">
+                                        <div style="text-align: justify;">
+                                                <h4>Next Meeting:</h4>
+                                                <p>
+                                                Our next meeting will be held over zoom.  The date has yet to be determined.  If you are interested in attending, please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.  We will send you the details as soon as they become available.
+                                                </p>   
+                                        </div>
+                                        
+                                </div>
+                                <h4>Upcoming Events</h4>
+                                North Dakota ASPA will be exhibiting at the ND league of Cities conference September 18th and 19th at the Bismark event center, please stop by and say hello.<br>
+                                
+                                <h4>Looking Ahead</h4>
 
-                        <p>
-                                UND’s Political Science and Public Administration department will be hosting an onlineWildfire Simulation.
-                                We are looking for public administrators, EMS workers and any other interested parties in the State of North Dakota to participate alongside 
-                                UND MPA students. If you might be interested in this event, please sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo3YfKmgoilfKoYyw8RdVk2Bx5W4yed8Zu-CfoDeYdrEP21w/viewform?usp=sharing&ouid=115399145034791348730">here</a>.  
-                        </p>
-                </div>
+                                <p>
+                                        UND’s Political Science and Public Administration department will be hosting an onlineWildfire Simulation.
+                                        We are looking for public administrators, EMS workers and any other interested parties in the State of North Dakota to participate alongside 
+                                        UND MPA students. If you might be interested in this event, please sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo3YfKmgoilfKoYyw8RdVk2Bx5W4yed8Zu-CfoDeYdrEP21w/viewform?usp=sharing&ouid=115399145034791348730">here</a>.  
+                                </p>
+                        </div>
+                </div><!--Grid end-->
+                
                 <div style="text-align: center; margin-top:1cm;"><img src="NDakotaCapital.jpg" alt="A photo of the North Dakota Capital at night"></div>
                 
         </body>
