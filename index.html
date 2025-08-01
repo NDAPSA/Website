@@ -99,6 +99,7 @@
         </style>
     </head>
     <script>
+        var countdownUpdater
         function correction(){
             if(detectMob()){
                 let hold = document.getElementById("gridBoard");
@@ -123,8 +124,11 @@
             document.getElementById("Factoid").innerHTML=facto;
             //FIFA countdown
             updateCountdown()
+            countdownUpdater = setInterval(updateCountdown,1000);//Should update every second.
         }
         function updateCountdown(){
+                var disLoc=document.getElementById("countDisplay");
+                disLoc.innerHTML="";
                 //FIFA countdown
                 var soccerDate=new Date("2026-06-11 19:00:00")
                 //console.log(soccerDate);
@@ -139,7 +143,7 @@
                 hours = Math.floor((hours+1)%24);//It's off by one for some reason.
                 minutes = Math.floor(minutes%60)
                 seconds = Math.floor(seconds%60)
-                var disLoc=document.getElementById("countDisplay");
+                
                 disLoc.innerHTML += String(days)+" days "
                 disLoc.innerHTML += String(hours)+" hours "
                 disLoc.innerHTML += String(minutes)+" minutes "
