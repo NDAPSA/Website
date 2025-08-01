@@ -108,7 +108,7 @@
             var today = new Date()
             let displayDate = today.toDateString();
             displayDate = displayDate.substring(0,10)+","+displayDate.substring(10);
-            displayDate = displayDate.substring(0,7)+".,"+displayDate.substring(7);
+            displayDate = displayDate.substring(0,7)+"."+displayDate.substring(7);
             displayDate = displayDate.substring(0,3)+".,"+displayDate.substring(3);
             document.getElementById("todayDate").innerHTML=displayDate;
             var dd = String(today.getDate());
