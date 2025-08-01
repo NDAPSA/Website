@@ -56,7 +56,7 @@
             }
             #calenderPic{
                 grid-area:calendarPic;
-                align-self:flex-end;
+                align-self:center;
                 /* margin-top: 7%; */
             }
             #gridBoard>div{
@@ -87,6 +87,11 @@
                 background-size: 100% 100%;
                 overflow-x: hidden;
             }
+            #todayDate{
+                position:absolute;
+                top:275px;
+                right:3%;
+            }
         </style>
     </head>
     <script>
@@ -100,11 +105,12 @@
             console.log("Corrections complete.")
             //Get the current date:
             var today = new Date()
+            document.getElementById("todayDate").innerHTML=today.toDateString();
             var dd = String(today.getDate());
             var mm = String(today.getMonth() + 1).padStart(2, '0');//January is 0 by default.
             var mothDay =  mm + '/' + dd;//I'm keeping the mispelling.
             let facto = theEventToday(mothDay);
-            document.getElementById("Factoid").innerHTML=facto
+            document.getElementById("Factoid").innerHTML=facto;
         }
         function detectMob() {
             const toMatch = [
@@ -373,6 +379,7 @@
         }
     </script>
         <body onload="correction()">
+                <div id="todayDate"></div>
                 <!-- <img id="backgroundImage" src="wild-prairie-rose-7.png"></div> -->
                 <div id="heading"><img alt="ASPA North Dakota" src="Logo.png"></div>
                 <hr>
