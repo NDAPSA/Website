@@ -21,9 +21,11 @@
                 grid-auto-columns:31%;
             }
             #news{
+                align-self: center;
                 grid-area: news;
             }
             #joinASPA{
+                align-self: center;
                 grid-area: join;
             }
             #joinASPA>*{
@@ -33,24 +35,29 @@
                 grid-area:questions;
             }
             #historyFact{
+                align-self: center;
                 grid-area:history;
             }
             #officers{
+                align-self: center;
                 grid-area:officers;
             }
             /* Currently removed: */
             /* #documents{
                 grid-area:minutes;
             } */
-            #calender{
+            div#calender{
+                align-self: center;
                 grid-area:calendar;
             }
             #calenderPic{
                 grid-area:calendarPic;
+                align-self:flex-end;
+                /* margin-top: 7%; */
             }
             #gridBoard>div{
                 text-align: justify;
-                align-self: center;
+                /* align-self: center; */
             }
             h2,h3,h4{
                 text-align: center;
@@ -65,6 +72,7 @@
             }
             #whyJoin{
                 grid-area:reasons;
+                align-self: center;
             }
             body{
                 padding-left: auto;
@@ -83,7 +91,7 @@
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
-                hold.style["grid-template-areas"] = " 'news' 'join' 'reasons' 'calendar' 'officers' 'history' 'questions' "
+                hold.style["grid-template-areas"] = " 'news' 'join' 'reasons' 'calendarPic' 'calendar' 'officers' 'history' 'questions' "
             }
             console.log("Corrections complete.")
             //Get the current date:
