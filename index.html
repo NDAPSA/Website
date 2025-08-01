@@ -93,6 +93,9 @@
                 top:275px;
                 right:3%;
             }
+            #countdown{
+                grid-area:football;
+            }
         </style>
     </head>
     <script>
@@ -101,21 +104,46 @@
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
-                hold.style["grid-template-areas"] = " 'news' 'history' 'join' 'reasons' 'calendarPic' 'calendar' 'officers'  'questions' "
+                hold.style["grid-template-areas"] = " 'news' 'history' 'join' 'reasons' 'calendarPic' 'calendar' 'officers'  'questions' 'football' "
             }
             console.log("Corrections complete.")
             //Get the current date:
             var today = new Date()
+            //Display date on page.
             let displayDate = today.toDateString();
             displayDate = displayDate.substring(0,10)+","+displayDate.substring(10);
             displayDate = displayDate.substring(0,7)+"."+displayDate.substring(7);
             displayDate = displayDate.substring(0,3)+".,"+displayDate.substring(3);
+            //Get todays factoid
             document.getElementById("todayDate").innerHTML=displayDate;
             var dd = String(today.getDate());
             var mm = String(today.getMonth() + 1).padStart(2, '0');//January is 0 by default.
             var mothDay =  mm + '/' + dd;//I'm keeping the mispelling.
             let facto = theEventToday(mothDay);
             document.getElementById("Factoid").innerHTML=facto;
+            //FIFA countdown
+            updateCountdown()
+        }
+        function updateCountdown(){
+                //FIFA countdown
+                var soccerDate=new Date("2026-06-11 19:00:00")
+                //console.log(soccerDate);
+                let Diff=(soccerDate-new Date())//This is in milliseconds
+                if(Diff<0){
+                        Diff=0;
+                }
+                var seconds = Diff/1000;
+                var minutes = seconds/60;
+                var hours = minutes/60;
+                var days = Math.floor(hours/24);
+                hours = Math.floor((hours+1)%24);//It's off by one for some reason.
+                minutes = Math.floor(minutes%60)
+                seconds = Math.floor(seconds%60)
+                var disLoc=document.getElementById("countDisplay");
+                disLoc.innerHTML += String(days)+" days "
+                disLoc.innerHTML += String(hours)+" hours "
+                disLoc.innerHTML += String(minutes)+" minutes "
+                disLoc.innerHTML += String(seconds)+" seconds"
         }
         function detectMob() {
             const toMatch = [
@@ -452,6 +480,13 @@
                                         We are looking for public administrators, EMS workers, and any other interested parties in, or near, the State of North Dakota to participate alongside 
                                         UND MPA students. If you might be interested in this event, please sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo3YfKmgoilfKoYyw8RdVk2Bx5W4yed8Zu-CfoDeYdrEP21w/viewform?usp=sharing&ouid=115399145034791348730">here</a>.  
                                 </p>
+                        </div>
+                        <div id="countDown" style="text-align: center;">
+                                <h2>FIFA 2026 World Cup</h2>
+                                <h4>Host by</h4>
+                                <h4>Canada, Mexico, and the United States of America</h4>
+                                <h4>Will begin in:</h4>
+                                <div id="countDisplay"></div>
                         </div>
                 </div><!--Grid end-->
                 <!-- <div id="documents">
