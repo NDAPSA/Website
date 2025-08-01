@@ -84,7 +84,7 @@
             console.log("Corrections complete.")
             //Get the current date:
             var today = new Date()
-            var dd = String(today.getDate()).padStart(2, '0');
+            var dd = String(today.getDate());
             var mm = String(today.getMonth() + 1).padStart(2, '0');//January is 0 by default.
             var mothDay =  mm + '/' + dd;//I'm keeping the mispelling.
             let facto = theEventToday(mothDay);
@@ -138,7 +138,7 @@
                 case "08/29":
                         return "On this date in 1879,  Louis Brownlow was born.  FDR's commission to reorganize government was chaired and named for Brownlow."
                 case "08/30":
-                        return "On this date in 1967, Thurgood Marshall was confirmed as a U.S. Supreme Court Justice.  He was the first African-American to serve on the high court."        
+                        return "On this date in 1967, Thurgood Marshall was confirmed as a U.S. Supreme Court Justice.  He was the first African-American to serve on the high court."
                 case "08/31":
                         return "On this date in 1972, The U.S. Air Force tested the F-15."
                 case "09/1":
@@ -148,7 +148,7 @@
                 case "09/3":
                         return "On this date in 1868, Mary Parker Follett was born.  She was a leading thinking in Organizational Theory. She tried to add the human piece to the mechanistic view of managerment in the early 20th Century."
                 case "09/4":
-                        return "On this date in 1957, Arkansas Governor Orval Faubus uses the state national guard to prevent 9 African-American students from entering Little Rock Central High School."
+                        return "On this date in 1957, Arkansas Governor Orval Faubus uses the state national guard to prevent 9 African-American students from entering Little Rock Central High School."      
                 case "09/5":
                         return "On this date in 1774, the 1st Continental Congress met in Philadephia, PA.   Twelve of the 13 British colonies were represened and Philadelphia became the first capital of the U.S."
                 case "09/6":
@@ -168,7 +168,7 @@
                 case "09/13":
                         return "On this date in 1945, the American Society for Public Administration was formally incorporated. (The organization began in 1939.)"
                 case "09/14":
-                        return "On this date in 1901, Theodore Roosevelt is sworn in as the youngest man to serve as US President, after William McKinley dies after being shots in Buffalo." 
+                        return "On this date in 1901, Theodore Roosevelt is sworn in as the youngest man to serve as US President, after William McKinley dies after being shots in Buffalo."
                 case "09/15":
                         return "On this date in 1966, U.S. President Lyndon B. Johnson, responding to a sniper attack at the University of Texas at Austin, writes a letter to the United States Congress urging the enactment of gun control legislation."
                 case "09/16":
@@ -186,7 +186,7 @@
                 case "09/22":
                         return "On this date in 1961, President Kennedy signed legislation creating the Peace Corp."
                 case "09/23":
-                        return "On this date in 1957, President Dwight D. Eisenhower orders US troops to support the integration of nine Black students at Little Rock Central High School in Arkansas."
+                        return "On this date in 1957, President Dwight D. Eisenhower orders US troops to support the integration of nine Black students at Little Rock Central High School in Arkansas."       
                 case "09/24":
                         return "On this date in 1789, President George Washington signed the Judiciary Act of 1789.  It established the six-member U.S. Supreme Court."
                 case "09/25":
@@ -264,9 +264,9 @@
                 case "01/23":
                         return "On this date in 2018, Wyatt Tee Walker died.  He served as an advisor to Gov. Nelson A. Rockefeller, but is better known for having served as chief-of-staff for Martin Luther King, Jr."
                 case "01/29":
-                        return "On this date in 1946,  Harold Hopkins died.  He was a key advisor to FDR focusing on increasing employment and foreign affairs.  He attend four major Allied conferences."
+                        return "On this date in 1946,  Harold Hopkins died.  He was a key advisor to FDR focusing on increasing employment and foreign affairs.  He attend four major Allied conferences."     
                 case "02/3":
-                        return "On this date in 1924, President Woodrow Wilson died.  His 1887 article \"The Study of Administration\" is often considered the foundation of American Public Administration."
+                        return "On this date in 1924, President Woodrow Wilson died.  His 1887 article \"The Study of Administration\" is often considered the foundation of American Public Administration."  
                 case "02/14":
                         return "On this date in 1903, the U.S. Department of Commerce was established."
                 case "02/19":
@@ -286,7 +286,7 @@
                 case "04/3":
                         return "On this date in 1939, the Reorganization Act was enacted.   It authorized the President to hire more staff.  It was a response to the Brownlow Committee report."
                 case "04/7":
-                        return "On this date in 2009, Samuel Beer died.  He served as FDR's speech writer and as a political advisor to JFK.  He was a leading scholar in Federalism."        
+                        return "On this date in 2009, Samuel Beer died.  He served as FDR's speech writer and as a political advisor to JFK.  He was a leading scholar in Federalism."
                 case "04/9":
                         return "On this date in 1996, Rufus E. Miles died.  He is known for developing Mile's Law: \"Where you stand depends on where you sit.\""
                 case "04/10":
@@ -336,23 +336,23 @@
                 case "08/6":
                         return "On this date in 1965, U.S. President Lyndon B. Johnson signed the Voting Rights Act, which sought to overcome legal barriers at the state and local levels that prevented African Americans from exercising their right to vote; the legislation was weakened through several lawsuits in the 21st century"
                 case "08/7":
-                        return "On this date in 1933, Elinor Ostrom was born.  She was the first women to win the Noble Prize in Economics (2009) for her work on common pool resources."     
+                        return "On this date in 1933, Elinor Ostrom was born.  She was the first women to win the Noble Prize in Economics (2009) for her work on common pool resources."
                 case "08/8":
                         return "On this date in 1974, Faced with impeachment for his role in the Watergate scandal, U.S. President Richard M. Nixon announced his resignation."
                 case "08/9":
-                        return "On this date in 1974, Gerald Ford became President of the United States.  He is the only man to serve as President who never won a national election."        
+                        return "On this date in 1974, Gerald Ford became President of the United States.  He is the only man to serve as President who never won a national election."
                 case "08/10":
                         return "On this date in 1846, The Smithsonian Institution was founded in Washington, D.C., by the U.S. Congress with funds bequeathed by English scientist James Smithson."
                 case "08/11":
                         return "On this date in 1965,  California Highway Patrol officer Lee Minikus pulled over Marquette Frye on suspicion of drunk driving.  This triggered the Watts riots is Los Angles, CA. Thirty-four people died."
                 case "08/12":
-                        return "On this date in 1961, East Germany began construction of the Berlin Wall, which served as a symbol of the Cold War, separating East Berlin from West Berlin until 1989."
+                        return "On this date in 1961, East Germany began construction of the Berlin Wall, which served as a symbol of the Cold War, separating East Berlin from West Berlin until 1989."       
                 case "08/13":
                         return "On this date in 1898, The U.S. Army took control of the Philippine port of Manila during the Spanish-American War."
                 case "08/14":
                         return "On this date in 1935, U.S. Pres. Franklin D. Roosevelt signed the Social Security Act, establishing a permanent national old-age pension system through employer and employee contributions."
                 default:
-                    return "No factoid as been indentify for today, if you have a suggestion, please email us."
+                        return "No factoid as been indentify for today, if you have a suggestion, please email us."
             }
         }
     </script>
