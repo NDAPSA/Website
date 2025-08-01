@@ -16,7 +16,8 @@
                 grid-template-areas:
                 "news history calendarPic"
                 "join officers calendar"
-                "reasons questions calendar";
+                "reasons questions calendar"
+                "reasons football calendar";
                 row-gap: .1cm;
                 grid-auto-columns:31%;
             }
@@ -105,7 +106,10 @@
             console.log("Corrections complete.")
             //Get the current date:
             var today = new Date()
-            document.getElementById("todayDate").innerHTML=today.toDateString();
+            let displayDate = today.toDateString();
+            displayDate = displayDate.substring(0,7)+"."+displayDate.substring(7)
+            displayDate = displayDate.substring(0,3)+"."+displayDate.substring(3)
+            document.getElementById("todayDate").innerHTML=displayDate;
             var dd = String(today.getDate());
             var mm = String(today.getMonth() + 1).padStart(2, '0');//January is 0 by default.
             var mothDay =  mm + '/' + dd;//I'm keeping the mispelling.
