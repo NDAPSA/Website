@@ -13,9 +13,9 @@
                 display: grid;
                 column-gap: 2%;
                 grid-template-areas:
-                "news join calendar"
-                "history officers calendar"
-                "questions minutes calendar";
+                "news history calendar"
+                "join officers calendar"
+                "reasons questions calendar";
                 row-gap: .1cm;
                 grid-auto-columns:32%;
             }
@@ -37,9 +37,10 @@
             #officers{
                 grid-area:officers;
             }
-            #documents{
+            /* Currently removed: */
+            /* #documents{
                 grid-area:minutes;
-            }
+            } */
             #calender{
                 grid-area:calendar;
             }
@@ -58,6 +59,9 @@
             #picAndMeet>img{
                 margin: auto;
             }
+            #whyJoin{
+                grid-area:reasons;
+            }
             body{
                 padding-left: auto;
                 font-size: 24px;
@@ -75,7 +79,7 @@
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
-                hold.style["grid-template-areas"] = " 'news' 'join' 'calender' 'officers' 'history' 'questions' 'minutes' "
+                hold.style["grid-template-areas"] = " 'news' 'join' 'reasons' 'calender' 'officers' 'history' 'questions' "
             }
             console.log("Corrections complete.")
             //Get the current date:
@@ -366,8 +370,10 @@
                         </div>
                         <div id="joinASPA">
                                 <h2>To Join ND ASPA:</h2>
-                                <p>Sign up the national APSA using this link:
-                                        <a href="https://www.aspanet.org/ASPA/ASPA/Membership/Membership.aspx"> ASPA membership webpage</a>
+                                <p>
+                                        The national office handles all memberships. To join the ND chapter sign up through the 
+                                        <a href="https://www.aspanet.org/ASPA/ASPA/Membership/Membership.aspx">national office,</a> and indicate you
+                                        wish to join the ND chapter.
                                 </p>
                         </p>
                         </div>
@@ -386,11 +392,13 @@
                 (Officer Election will be held this fall.  If you are interested in serving please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.)
 
                         </div>
-
-                        <div id="documents">
+                        <div id="whyJoin">
+                                
+                        </div>
+                        <!-- <div id="documents">
                                 Minutes and other important documents related to ND ASPA can be found here.<br>
                                 Check back later to find them.
-                        </div>
+                        </div> -->
                         <div id="calender">
                                 <div id="picAndMeet" style="display:grid; grid-template-columns: auto auto; column-gap: .5cm;padding-top:auto;">
                                         <img src="calendar.png" alt="A calender" width="200" height="200">
