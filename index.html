@@ -8,16 +8,17 @@
                 text-align: center;
             }
             #gridBoard{
+                margin-left: 3vw;
                 padding-left: auto;
                 max-width: 100vw;
                 display: grid;
                 column-gap: 2%;
                 grid-template-areas:
-                "news history calendar"
+                "news history calendarPic"
                 "join officers calendar"
                 "reasons questions calendar";
                 row-gap: .1cm;
-                grid-auto-columns:32%;
+                grid-auto-columns:31%;
             }
             #news{
                 grid-area: news;
@@ -43,6 +44,11 @@
             } */
             #calender{
                 grid-area:calendar;
+                vertical-align: top;
+            }
+            #calenderPic{
+                grid-area:calendarPic;
+                vertical-align: top;
             }
             #gridBoard>div{
                 text-align: justify;
@@ -51,11 +57,11 @@
             h2,h3,h4{
                 text-align: center;
             }
-            #picAndMeet{
+            /* #picAndMeet{
                 display:grid; 
                 grid-template-columns: auto auto; 
                 column-gap: 3%;
-            }
+            } */
             #picAndMeet>img{
                 margin: auto;
             }
@@ -79,7 +85,7 @@
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
-                hold.style["grid-template-areas"] = " 'news' 'join' 'reasons' 'calender' 'officers' 'history' 'questions' "
+                hold.style["grid-template-areas"] = " 'news' 'join' 'reasons' 'calendar' 'officers' 'history' 'questions' "
             }
             console.log("Corrections complete.")
             //Get the current date:
@@ -402,12 +408,10 @@
                                 <b>Exclusive Job Listings</b> – View member-only job postings through ASPA, once you join.<br><br>
                                 <b>Chapter Engagement</b> – Support your North Dakota state chapter. Help us decide how we can best serve our state!<br><br>
                         </div>
-                        <!-- <div id="documents">
-                                Minutes and other important documents related to ND ASPA can be found here.<br>
-                                Check back later to find them.
-                        </div> -->
-                        <div id="calender">
+                        <div id="calenderPic">
                                 <div style="text-align: center;"><img src="calendar.png" alt="A calender" width="200" height="200"></div>
+                        </div>
+                        <div id="calender">
                                 <div style="text-align: justify;">
                                         <h3>Next Meeting:</h3>
                                         <p>
@@ -426,7 +430,10 @@
                                 </p>
                         </div>
                 </div><!--Grid end-->
-                
+                <!-- <div id="documents">
+                                Minutes and other important documents related to ND ASPA can be found here.<br>
+                                Check back later to find them.
+                        </div> -->
                 <div style="text-align: center; margin-top:1cm;"><img src="NDakotaCapital.jpg" alt="A photo of the North Dakota Capital at night"></div>
                 
         </body>
