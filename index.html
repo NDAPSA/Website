@@ -35,8 +35,12 @@
                 grid-area:questions;
             }
             #historyFact{
+                border: 5px #6B996A solid;
                 align-self: center;
                 grid-area:history;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 5px;
             }
             #officers{
                 align-self: center;
@@ -91,7 +95,7 @@
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
-                hold.style["grid-template-areas"] = " 'news' 'join' 'reasons' 'calendarPic' 'calendar' 'officers' 'history' 'questions' "
+                hold.style["grid-template-areas"] = " 'news' 'history' 'join' 'reasons' 'calendarPic' 'calendar' 'officers'  'questions' "
             }
             console.log("Corrections complete.")
             //Get the current date:
