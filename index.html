@@ -8,7 +8,9 @@
                 text-align: center;
             }
             #gridBoard{
-                margin-left: 2vw;
+                /* border: black solid 1px; */
+                margin-left: 3vw;
+                margin-right: 3vw;
                 padding-left: auto;
                 max-width: 94vw;
                 display: grid;
@@ -19,7 +21,7 @@
                 "reasons questions calendar"
                 "reasons football calendar";
                 row-gap: .1cm;
-                grid-auto-columns:31%;
+                grid-auto-columns:32%;
             }
             #news{
                 align-self: center;
@@ -104,6 +106,7 @@
             if(detectMob()){
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
+                hold.style["grid-auto-columns"] = "31%"
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
                 hold.style["grid-template-areas"] = " 'news' 'history' 'join' 'reasons' 'calendarPic' 'calendar' 'officers'  'questions' 'football' "
             }
@@ -469,7 +472,7 @@
                         <div id="calender">
                                 <div style="text-align: justify;">
                                         <h3>Next Meeting:</h3>
-                                        <p>
+                                        <p style="text-align: justify;">
                                         Our next meeting will be held over zoom.  The date has yet to be determined.  If you are interested in attending, please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.  We will send you the details as soon as they become available.
                                         </p>   
                                 </div>
