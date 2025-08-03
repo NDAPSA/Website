@@ -103,10 +103,12 @@
     <script>
         var countdownUpdater
         function correction(){
-            if(detectMob()){
+            if(detectMob()){//Client is on moblie.
                 let hold = document.getElementById("gridBoard");
                 hold.style["grid-template-columns"] = "auto";//Cause 3 rows on a moblie device would be kinda difficult.
                 hold.style["grid-auto-columns"] = "31%"
+                hold.style["margin-left"] = "2vw";
+                hold.style["margin-right"] = "2vw";
                 // hold.style["grid-template-areas"] = " 'news' 'join' 'look' 'upcoming' 'officers' 'meeting' 'history' 'questions' 'minutes' "
                 hold.style["grid-template-areas"] = " 'news' 'history' 'join' 'reasons' 'calendarPic' 'calendar' 'officers'  'questions' 'football' "
             }
