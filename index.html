@@ -17,15 +17,17 @@
                 column-gap: 2%;
                 grid-template-areas:
                 "news history calendarPic"
-                "join officers calendar"
-                "reasons questions calendar"
-                "reasons football calendar";
+                "news join calendar"
+                "news reasons calendar"
+                "news reasons officers"
+                "news football questions";
                 row-gap: .1cm;
                 grid-auto-columns:32%;
             }
             #news{
                 align-self: center;
                 grid-area: news;
+                text-align: center;
             }
             #joinASPA{
                 align-self: center;
@@ -60,10 +62,11 @@
             #calenderPic{
                 grid-area:calendarPic;
                 align-self:center;
-                /* margin-top: 7%; */
+                margin-top: 10%;
             }
             #gridBoard>div{
                 text-align: justify;
+                /* align-content: center; */
                 /* align-self: center; */
             }
             h2,h3,h4{
@@ -97,6 +100,9 @@
             }
             #countdown{
                 grid-area:football;
+            }
+            #news>p{
+                text-align: justify;
             }
         </style>
     </head>
@@ -526,20 +532,24 @@
                 <div id="heading"><img alt="ASPA North Dakota" src="Logo.png"></div>
                 <hr>
                 <div id="gridBoard">
-                        <div id="news">
-                                <h3>News alert:</h3>
-                                <!-- <p>
+                        <div id="news" style="text-align: center;">
+                                <h2>News Alert:</h2>
+                                <p>
                                         On July 23, 2025, the National Council of the American Society for Public Administration approved the ND ASPA chapter application.  
                                         This is the first time in ND history that we have had a state ASPA chapter.   There was an upper Midwest regional chapter that we were part of, at one point, but this is our first independent ND chapter.  
-                                </p> -->
-                                <p>
-                                        On September 18th and 19th, we attended the North Dakota League of Cities conference and exhibited alongside UND’s Department of Political Science and Public Administration. Dr. Buehlmann spoke to many attendees about both UND’s excellent programs and ND ASPA.
                                 </p>
+                                        <h3>ND APSA at NDLC</h3>
+                                <p>
+                                        On September 18th and 19th, we attended the North Dakota League of Cities (NDLC) conference and exhibited alongside UND’s Department of Political Science and Public Administration. Dr. Buehlmann spoke to many attendees about both UND’s excellent programs and ND ASPA.
+                                </p>
+                                        <img src="Picture1.jpg" alt="TODO">
+                                        <h3>Local Government Night:<br> UND and GFC</h3>
                                 <p>
                                         ND ASPA members Todd Feland, Michelle Buehlmann, and Dana Harsell all attended the event. 
                                         This event was held jointly with UND’s Department of Political Science and Public Administration and involved students from their MPA program and undergraduate Public Affairs Club. 
                                         Officials from the Grand Forks city government explained what they do and answered students’ questions. A <i>Grand</i> time was had by all!
                                 </p>
+                                        <img src="Picture2.jpg" alt="TODO">
                         </div>
                         <div id="joinASPA">
                                 <h2>To Join ND ASPA:</h2>
@@ -562,10 +572,20 @@
                         <div id="officers">
                                 <h3>ND ASPA Officers: </h3>
 
-                                <p>Officer Election will be held this fall.  If you are interested in serving please email us at <br><a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.</p>
+                                <!-- <p>If you are interested in serving please email us at <br><a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.</p> -->
 
-                                <p>Minutes and other important documents related to ND ASPA will be posted here. Check back later to find them.</p>
+                                <!-- <p>Minutes and other important documents related to ND ASPA will be posted here. Check back later to find them.</p> -->
+                                <ul>
+                                        <li><b>President:</b> Sierra</li>
+                                        <li><b>1-year council:</b> Chris, Dana, Luke</li>
+                                        <li><b>2-year council:</b> Allison, Alicia, Michelle</li>
+                                </ul>
                         </div>
+                        <!--
+                        President
+                        1-year council
+                        2-year council
+                        -->
                         <div id="whyJoin">
                                 <h2>Five Reasons to Join: </h2><br>
                                 <b>Networking Opportunities</b> – Connect with peers through 
@@ -583,7 +603,7 @@
                                 <div style="text-align: justify;">
                                         <h3>Next Meeting:</h3>
                                         <p style="text-align: justify;">
-                                        Our next meeting will be held over zoom on <b>October 7th</b> at 6:30PM CST.  If you are interested in attending, please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.  We will send you the details as soon as they become available.
+                                        Our next meeting will be held over zoom on <b>Lorem ipsum</b> at 5:30PM CST.  If you are interested in attending, please email us at <a href="mailto:northdakota.aspa@gmail.com">northdakota.aspa@gmail.com</a>.  We will send you the details as soon as they become available.
                                         </p>   
                                 </div>
                                 <h3>Upcoming Events</h3>
