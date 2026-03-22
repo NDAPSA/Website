@@ -18,11 +18,12 @@
                 display: grid;
                 column-gap: 2%;
                 grid-template-areas:
-                "news history calendarPic"
-                "news join calendar"
-                "news reasons calendar"
-                "news reasons officers"
-                "news football questions";
+                "officers history calendarPic"
+                "questions join calendar"
+                "news reasons newsThree"
+                "news newsTwo newsThree"
+                "news newsTwo newsThree"
+                "news football newsThree";
                 row-gap: .1cm;
                 grid-auto-columns:32%;
             }
@@ -32,7 +33,7 @@
                 text-align: center;
                 padding-right: 10px;
                 overflow-y: auto;
-                max-height: 2000px; 
+                /*max-height: 2000px; */
             }
             #joinASPA{
                 align-self: center;
@@ -53,7 +54,7 @@
                 padding-bottom: 5px;
             }
             #officers{
-                align-self: center;
+                /*align-self: center;*/
                 grid-area:officers;
             }
             /* Currently removed: */
@@ -103,11 +104,17 @@
                 top:275px;
                 right:3%;
             }
-            #countdown{
+            #countDown{
                 grid-area:football;
             }
             #news>article{
                 text-align: justify;
+            }
+            #news2{
+                grid-area:newsTwo;
+            }
+            #news3{
+                grid-area:newsThree;
             }
         </style>
     </head>
@@ -128,6 +135,7 @@
                                         
                                 <article>
                                         <h3>ND ASPA Participates in Wenstrom Lecture Featuring Former U.S. Rep. Earl Pomeroy</h3>
+                                        <img src="earl_pomeroy_lecture.jpg" alt="TODO" style="max-width:100%"></img>
                                         <img src="Wenstrom.jpg" alt="Michelle Buehlmann sitting at a table with the North Dakota ASPA logo on it." style="max-width:100%"></img>
                                         <p>The North Dakota Chapter of the American Society for Public Administration (ND ASPA) participated in the Nistler College of Business & Public Administration’s Wenstrom Lecture Series on February 26, which featured former U.S. Representative Earl Pomeroy as the evening’s speaker.</p>
                                         <p>ND ASPA hosted a recruitment and outreach table during the event, welcoming attendees and sharing information about opportunities for students and practitioners to engage with the public administration community across North Dakota. The lecture drew a strong audience from across campus and the broader community, creating a lively atmosphere for discussion and engagement.</p>
@@ -136,20 +144,7 @@
                                         <p>Events like the Wenstrom Lecture Series reflect ND ASPA’s commitment to encouraging informed dialogue about public institutions and governance while connecting students, practitioners, and community members across North Dakota.</p>
                                 </article>
                                         
-                                        
-                                <article>
-                                        <h2>Wildfire Response Simulation: Practitioners and Students Learning Together</h2>
-                                        <p>The North Dakota American Society for Public Administration (ND ASPA), in partnership with the University of North Dakota Master of Public Administration program (UND-MPA) and the Network of Schools of Public Policy, Affairs, and Administration (NASPAA), hosted a virtual interactive wildfire response simulation on February 7, 2026.</p>
-                                        <p>A defining feature of the event was the participation of experienced practitioners representing local and state government agencies across North Dakota, including representatives from the North Dakota Forest Service, fire chiefs from communities across the state, and ND ASPA member Sarah Hellekson, City Administrator for Jamestown. Practitioners worked directly with students to model collaborative problem-solving and share professional perspectives grounded in real public-service experience.</p>
-                                        <p>Practitioners highlighted the practical value of the simulation:</p>
-                                        <p>“It is realistic and pushes you to approach problems from multiple perspectives.” — <b>Bill Ruelle</b></p>
-                                        <p>“This is an incredible asset to the future of North Dakota, from the smallest park board to the state legislature. Everyone can win with this program. It has taught me how to maintain the balance of who I am, and what I believe. And learn to work with others that have different thoughts... Everyone’s voice does matter in this simple simulation. We all have to give and take to achieve a win for the future of society.” — <b>Brian Galvin, Chief, Goodrich Fire Department</b></p>
-                                        <p>“It’s good practice in balancing interests while working toward policy solutions.” — <b>Marisa Sauceda, Legal Services North Dakota, Disaster Services Program</b></p>
-                                        <p>“It is enlightening and engaging.” — <b>Troy Shockey</b></p>
-                                        <p>A post-event survey reflected strong support for the experience, with all respondents indicating they would recommend the simulation to others, including 70 percent who said they would definitely recommend it. Additionally, 85 percent of respondents rated the event as excellent or very good.</p>
-                                        <p>The simulation placed practitioners and students in the roles of agency leaders, community stakeholders, and policy decision-makers responding to a rapidly evolving wildfire scenario. Through interagency coordination, negotiation under pressure, and balancing competing public interests, the exercise strengthened core public-service competencies, including communication, collaborative leadership, and strategic decision-making.</p>
-                                        <p>The wildfire simulation reflects ND ASPA’s ongoing commitment — alongside partners at UND-MPA and NASPAA — to connecting practitioners and future public administrators through experiential learning opportunities that bridge classroom knowledge and real-world governance challenges.</p>
-                                </article>
+                                    
                                         
                         </div>
                         <div id="joinASPA">
@@ -201,7 +196,7 @@
                                 <img src="calendar.png" alt="A calender" width="200" height="200">
                         </div>
                         <div id="calender">
-                                <section style="text-align: justify;">
+                            <section style="text-align: justify;">
                                         <h3>Next Meeting:</h3>
                                         <p style="text-align: justify;">
                                         Our next meeting will be held over zoom in <b>late April</b> (more details to follow).  
@@ -210,17 +205,32 @@
                                          We will send you the details as soon as they become available.
                                         </p>   
                                 </section>
-                                <h3>Upcoming Events</h3>
-                                        UND’s Political Science Department and Public Administration will be hosting an online Wildfire Simulation.
-                                        We are looking for public administrators, EMS workers, and any other interested parties in, or near, the State of North Dakota to participate alongside 
-                                        UND MPA students. If you might be interested in this event, please sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo3YfKmgoilfKoYyw8RdVk2Bx5W4yed8Zu-CfoDeYdrEP21w/viewform?usp=sharing&ouid=115399145034791348730">here</a>.  
-                                <!-- <h3>Looking Ahead</h3>
+                        </div>
+                        <div id="news3">
+                                
+                                <article>
+                                        <h2>Wildfire Response Simulation: Practitioners and Students Learning Together</h2>
+                                        <p>The North Dakota American Society for Public Administration (ND ASPA), in partnership with the University of North Dakota Master of Public Administration program (UND-MPA) and the Network of Schools of Public Policy, Affairs, and Administration (NASPAA), hosted a virtual interactive wildfire response simulation on February 7, 2026.</p>
+                                        <p>A defining feature of the event was the participation of experienced practitioners representing local and state government agencies across North Dakota, including representatives from the North Dakota Forest Service, fire chiefs from communities across the state, and ND ASPA member Sarah Hellekson, City Administrator for Jamestown. Practitioners worked directly with students to model collaborative problem-solving and share professional perspectives grounded in real public-service experience.</p>
+                                        <p>Practitioners highlighted the practical value of the simulation:</p>
+                                        <p>“It is realistic and pushes you to approach problems from multiple perspectives.” — <b>Bill Ruelle</b></p>
+                                        <p>“This is an incredible asset to the future of North Dakota, from the smallest park board to the state legislature. Everyone can win with this program. It has taught me how to maintain the balance of who I am, and what I believe. And learn to work with others that have different thoughts... Everyone’s voice does matter in this simple simulation. We all have to give and take to achieve a win for the future of society.” — <b>Brian Galvin, Chief, Goodrich Fire Department</b></p>
+                                        <p>“It’s good practice in balancing interests while working toward policy solutions.” — <b>Marisa Sauceda, Legal Services North Dakota, Disaster Services Program</b></p>
+                                        <p>“It is enlightening and engaging.” — <b>Troy Shockey</b></p>
+                                        <p>A post-event survey reflected strong support for the experience, with all respondents indicating they would recommend the simulation to others, including 70 percent who said they would definitely recommend it. Additionally, 85 percent of respondents rated the event as excellent or very good.</p>
+                                        <p>The simulation placed practitioners and students in the roles of agency leaders, community stakeholders, and policy decision-makers responding to a rapidly evolving wildfire scenario. Through interagency coordination, negotiation under pressure, and balancing competing public interests, the exercise strengthened core public-service competencies, including communication, collaborative leadership, and strategic decision-making.</p>
+                                        <p>The wildfire simulation reflects ND ASPA’s ongoing commitment — alongside partners at UND-MPA and NASPAA — to connecting practitioners and future public administrators through experiential learning opportunities that bridge classroom knowledge and real-world governance challenges.</p>
+                                </article>
+                        </div>
+                        <div id="news2">
+                            <h2>ND ASPA Chapter Recognized with National Award in Inaugural Year</h2>
+<p>The North Dakota chapter of the American Society for Public Administration (ND ASPA) has been nationally recognized for its work during its first year of operation. ASPA President John Bartle awarded Michelle Buehlmann the Chester A. Newland Presidential Citation of Merit for her work in establishing the chapter.</p>
 
-                                <p>
-                                        UND’s Department Political Science and Public Administration will be hosting an online Wildfire Simulation.
-                                        We are looking for public administrators, EMS workers, and any other interested parties in, or near, the State of North Dakota to participate alongside 
-                                        UND MPA students. If you might be interested in this event, please sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo3YfKmgoilfKoYyw8RdVk2Bx5W4yed8Zu-CfoDeYdrEP21w/viewform?usp=sharing&ouid=115399145034791348730">here</a>.  
-                                </p> -->
+<p>Established in July 2025, ND ASPA is the first chapter in the state’s history. The national recognition reflects the chapter’s rapid development and its contributions to strengthening connections between public service practitioners, students, and academic programs across North Dakota.</p>
+<p>In its inaugural year, ND ASPA focused on building a statewide professional community through outreach and programming. The chapter organized tabling events, expanded membership, and partnered with the University of North Dakota’s Master of Public Administration program to host a wildfire response simulation. The event brought together local and state government professionals and students to engage in collaborative problem-solving and applied learning.</p>
+<p>The award was presented at ASPA’s annual conference in March 2026. ND ASPA Executive Committee member Luke Jones, visiting professor in the Department of Political Science & Public Administration at the University of North Dakota, attended the conference and accepted the award.</p>
+<p>ASPA is the leading professional association for public service, bringing together practitioners and scholars to advance the field of public administration.</p>
+<p>This national recognition highlights the impact of ND ASPA’s first year and underscores the chapter’s role in supporting public service collaboration, professional development, and student engagement across the state.</p>
                         </div>
                         <div id="countDown" style="text-align: center;">
                                 <h2>FIFA 2026 World Cup</h2>
